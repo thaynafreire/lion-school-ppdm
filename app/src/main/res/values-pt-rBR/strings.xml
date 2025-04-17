@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LionSchool</string>
+    <string name="logo_lion_school">Logo LionSchool</string>
+    <string name="title_app_name">Lion School</string>
+    <string name="title_homescreen">Encontre seu curso favorito</string>
+    <string name="subtitle_homescreen">Chegue ao seu destino mais rápido, estude na melhor escola profissionalizante do Brasil. Seja a melhor versão de si mesmo.</string>
+    <string name="button_start_homescreen">Começar</string>
+    <string name="logo_youtube">Logo Youtube</string>
+    <string name="logo_twitter">Logo Twitter</string>
+    <string name="logo_instagram">Logo Instagram</string>
+    <string name="logo_facebook">Logo Facebook</string>
+</resources>
