@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.lionschool.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -19,7 +20,10 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldColors
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -86,23 +90,34 @@ fun CoursesScreen(modifier: Modifier = Modifier){
                     .height(0.8.dp)
             )
             OutlinedTextField(
+                value = "",
+                onValueChange = {
+
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(10.dp)
-                    .height(45.dp),
-                shape = RoundedCornerShape(
-                    12.dp
-                ),
-                trailingIcon =
-                Icon(
-                    imageVector = Icons.Default.Search,
-                    contentDescription = "",
-                    tint = Color(0xffb7b7b7)
-                ),
-                value = "",
-                onValueChange = {},
+                    .height(50.dp)
+                    .background(Color(0xfff5f5f5)),
+                shape = RoundedCornerShape(12.dp),
+                trailingIcon = {
+                    Icon(
+                        imageVector = Icons.Default.Search,
+                        contentDescription = null,
+                        tint = Color(0xffb7b7b7)
+                    )
+                },
+                label = {
+                    Text(
+                        text = stringResource(
+                            R.string.text_field_courses
+                        ),
+                        color = Color(0xffb7b7b7),
+                        modifier = Modifier
+                            .padding(start = 25.dp)
+                    )
+                }
             )
-
         }
     }
 
