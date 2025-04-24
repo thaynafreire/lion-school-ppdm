@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">LionSchool</string>
+    <string name="app_name_lion">Lion</string>
+    <string name="app_name_school">School</string>
     <string name="logo_lion_school">Logo LionSchool</string>
     <string name="title_app_name">Lion School</string>
     <string name="title_homescreen">Find your favorite course</string>
@@ -10,4 +12,23 @@
     <string name="logo_instagram">Logo Instagram</string>
     <string name="logo_facebook">Logo Facebook</string>
     <string name="text_field_courses">Find your course</string>
+    <string name="lion_list">List</string>
+    <string name="courses">Courses</string>
+    <string name="lion_ds">Logo DS</string>
+    <string name="couse_acronym_ds">DS</string>
+    <string name="couse_acronym_rds">RDS</string>
+    <string name="couse_acronym_ele">ELE</string>
+    <string name="couse_name_ds">Desenvolvimento de Sistemas</string>
+    <string name="couse_name_rds">Redes de Computadores</string>
+    <string name="couse_name_ele">Eletroeletrônica</string>
+    <string name="couse_description_ds">Learn to develop web and mobile applications.</string>
+    <string name="couse_description_rds">Learn to design communication networks.</string>
+    <string name="couse_description_ele">Learn to design communication networks.</string>
+    <string name="couse_term_ds">3 semesters</string>
+    <string name="couse_term_rds">3 semesters</string>
+    <string name="couse_term_ele">3 semesters</string>
+    <string name="text_field_students">Find a student</string>
+    <string name="all_students">All</string>
+    <string name="studying">Studying</string>
+    <string name="conclude">Conclude</string>
 </resources>
