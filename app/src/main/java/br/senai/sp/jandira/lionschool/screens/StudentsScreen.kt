@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.lionschool.screens
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -17,6 +18,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -28,7 +30,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.motionEventSpy
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -36,6 +41,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.lionschool.R
+import br.senai.sp.jandira.lionschool.screens.components.LionSchoolCouses
+import br.senai.sp.jandira.lionschool.screens.components.LionSchoolStudents
 import java.util.Locale
 
 @Composable
@@ -174,7 +181,7 @@ fun StudentsScreen(modifier: Modifier = Modifier){
             Row (
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 10.dp)
+                    .padding(10.dp)
                     .height(40.dp),
                     //.background(color = Color.Magenta)
                 horizontalArrangement = Arrangement.Start
@@ -182,7 +189,7 @@ fun StudentsScreen(modifier: Modifier = Modifier){
                 Card(
                     modifier = Modifier
                         .width(80.dp)
-                        .fillMaxHeight(),
+                        .padding(end = 5.dp),
                     shape = RoundedCornerShape(20.dp),
                     colors = CardDefaults.cardColors(
                         containerColor = Color(0xff3347B0)
@@ -194,16 +201,114 @@ fun StudentsScreen(modifier: Modifier = Modifier){
                     ) {
                         Text(
                             text = stringResource(R.string.all_students),
-                            color = Color(0x0FFFFFFF),
+                            color = Color(0xFFFFFFFF),
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold
                         )
                     }
+
                 }
+                Card(
+                    modifier = Modifier
+                        .width(80.dp)
+                        .padding(end = 5.dp),
+                    shape = RoundedCornerShape(20.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color(0xffFFC23D)
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = stringResource(R.string.studying),
+                            color = Color(0xff3347B0),
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
 
+                }
+                Card(
+                    modifier = Modifier
+                        .width(80.dp),
+                    shape = RoundedCornerShape(20.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color(0xffFFC23D)
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = stringResource(R.string.conclude),
+                            color = Color(0xff3347B0),
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
 
-
+                }
             }
+            Row (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp)
+
+            ){
+                Image(
+                    modifier = Modifier
+                        .size(35.dp),
+                    painter = painterResource(
+                        R.drawable.lion_graduation
+                    ),
+                    contentDescription = stringResource(
+                        R.string.lion_graduation
+                    ),
+
+                )
+                Text(
+                    modifier = Modifier
+                        .padding(5.dp),
+                    text = stringResource(R.string.students_list),
+                    color = Color(0xff3347B0),
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+
+                )
+            }
+            LionSchoolStudents(
+                profile = painterResource(R.drawable.lion_user_luana),
+                name = stringResource( R.string.lion_user_name_luana),
+                matricula = stringResource( R.string.lion_user_matricula_luana),
+                year = stringResource(R.string.lion_user_year_luana)
+            )
+            LionSchoolStudents(
+                profile = painterResource(R.drawable.lion_user_pedro),
+                name = stringResource( R.string.lion_user_name_pedro),
+                matricula = stringResource( R.string.lion_user_matricula_pedro),
+                year = stringResource(R.string.lion_user_year_pedro)
+            )
+            LionSchoolStudents(
+                profile = painterResource(R.drawable.lion_user_luana),
+                name = stringResource( R.string.lion_user_name_luana),
+                matricula = stringResource( R.string.lion_user_matricula_luana),
+                year = stringResource(R.string.lion_user_year_luana)
+            )
+            LionSchoolStudents(
+                profile = painterResource(R.drawable.lion_user_pedro),
+                name = stringResource( R.string.lion_user_name_pedro),
+                matricula = stringResource( R.string.lion_user_matricula_pedro),
+                year = stringResource(R.string.lion_user_year_pedro)
+            )
+            LionSchoolStudents(
+                profile = painterResource(R.drawable.lion_user_luana),
+                name = stringResource( R.string.lion_user_name_luana),
+                matricula = stringResource( R.string.lion_user_matricula_luana),
+                year = stringResource(R.string.lion_user_year_luana)
+            )
         }
     }
 }

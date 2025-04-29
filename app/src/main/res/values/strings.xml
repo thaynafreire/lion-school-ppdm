@@ -31,4 +31,15 @@
     <string name="all_students">All</string>
     <string name="studying">Studying</string>
     <string name="conclude">Conclude</string>
+    <string name="lion_graduation">Mortarboard</string>
+    <string name="students_list">Students List</string>
+    <string name="lion_user_luana">Profile user</string>
+    <string name="lion_user_name_luana">Luana Oliveira Dias</string>
+    <string name="lion_user_matricula_luana">20151001018</string>
+    <string name="lion_user_year_luana">2022</string>
+    <string name="lion_user">image</string>
+    <string name="lion_user_name_pedro">Pedro da Silva Borges</string>
+    <string name="lion_user_matricula_pedro">20151001018</string>
+    <string name="lion_user_year_pedro">2022</string>
+
 </resources>
